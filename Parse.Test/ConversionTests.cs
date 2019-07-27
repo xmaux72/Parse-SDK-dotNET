@@ -28,7 +28,7 @@ namespace Parse.Test
             {
                 float inputValue = 1234.56f;
                 string jsonEncoded = Common.Internal.Json.Encode(inputValue);
-                float convertedValue = (float) Conversion.ConvertTo<float>(jsonEncoded);
+                float convertedValue = (float) Convert.ToDouble(jsonEncoded);
                 Assert.IsTrue(inputValue == convertedValue);
             }
             catch (Exception ex)
